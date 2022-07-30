@@ -10,6 +10,3 @@ https://www.conjur.org/blog/technical-deep-dive-security-automation-with-red-hat
 ```shell
 ./load-policies.sh
 ```
-
-
-![img.png](img.png)
