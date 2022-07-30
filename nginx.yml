@@ -1,5 +1,5 @@
----
-- hosts: nginx-host
+- name: nginx setup
+  hosts: nginx-host
   become: true
   tasks:
     - name: Installs nginx web server
