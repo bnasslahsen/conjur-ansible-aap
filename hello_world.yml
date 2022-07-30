@@ -2,10 +2,13 @@
   hosts: all
   collections:
     - cyberark.conjur
+  vars:
+    machine:
+      username: '{{ ansible_user }}'
+      password: '{{ ansible_password }}'
   tasks:
     - name: Hello Message
       debug:
         msg: "Hello World!"
-    - name: Lookup variable in Conjur
-      debug:
-        msg: "{{ lookup('cyberark.conjur.conjur_variable', 'cd/ansible/secrets/github_username') }}"
+    - debug:
+        var: machine
