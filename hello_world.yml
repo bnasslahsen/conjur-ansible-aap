@@ -1,7 +1,5 @@
 - name: Hello World Sample
   hosts: all
-  collections:
-    - cyberark.conjur
   vars:
     machine:
       username: '{{ ansible_user }}'
