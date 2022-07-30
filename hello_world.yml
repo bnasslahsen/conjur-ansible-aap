@@ -1,6 +1,11 @@
 - name: Hello World Sample
   hosts: all
+  collections:
+    - cyberark.conjur
   tasks:
     - name: Hello Message
       debug:
         msg: "Hello World!"
+    - name: Lookup variable in Conjur
+      debug:
+        msg: "{{ lookup('cyberark.conjur.conjur_variable', 'cd/ansible/secrets/github_username') }}"
