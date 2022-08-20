@@ -1,12 +1,7 @@
 - name: nginx setup
   hosts: nginx-host
   become: true
-  tasks:
-    - name: Add epel-release repo
-      yum:
-        name: epel-release
-        state: present
-      
+  tasks:      
     - name: Installs nginx web server
       yum: pkg=nginx state=present update_cache=true
       notify:
