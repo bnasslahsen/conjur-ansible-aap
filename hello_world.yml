@@ -4,9 +4,13 @@
     machine:
       username: '{{ ansible_user }}'
       password: '{{ ansible_password }}'
+      nginx_private_key: "{{ lookup('cyberark.conjur.conjur_variable', 'cd/ansible/secrets/nginx_private_key', validate_certs=false) }}"
   tasks:
     - name: Hello Message
       debug:
         msg: "Hello World!"
     - debug:
-        var: machine
+        var: machine    
+    - name: Lookup variable in Conjur
+      debug: 
+        msg: "{{ nginx_private_key }}"
