@@ -1,5 +1,9 @@
 - name: Hello World Sample
   hosts: localhost
+  vars:
+  machine:
+    username: '{{ ansible_user }}'
+    password: '{{ ansible_password }}'
   tasks:
     - name: Hello Message
       debug:
