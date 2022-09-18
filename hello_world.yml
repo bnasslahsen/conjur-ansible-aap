@@ -1,7 +1,6 @@
 - name: Hello World Sample
   hosts: all
   vars:
-    nginx_private_key: "{{ lookup('cyberark.conjur.conjur_variable', 'cd/ansible/secrets/nginx_private_key', validate_certs=false) }}"
     machine:
       username: '{{ ansible_user }}'
       password: '{{ ansible_password }}'
@@ -11,6 +10,3 @@
         msg: "Hello World!"
     - debug:
         var: machine    
-    - name: Lookup variable in Conjur
-      debug: 
-        msg: "{{ nginx_private_key }}"
