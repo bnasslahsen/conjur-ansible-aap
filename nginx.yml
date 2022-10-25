@@ -5,12 +5,12 @@
     - name: Installs nginx web server
       yum: pkg=nginx state=latest
       notify:
-        - start nginx
+        - restart nginx
 
   handlers:
     - name: start nginx
       service: name=nginx state=started
-
+      
     - name: Get facts
       debug:
         msg:
