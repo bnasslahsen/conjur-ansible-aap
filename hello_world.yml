@@ -1,5 +1,5 @@
 - name: Hello World Sample
-  hosts: localhost
+  hosts: nginx-host
   vars:
     machine:
       username: '{{ ansible_user }}'
