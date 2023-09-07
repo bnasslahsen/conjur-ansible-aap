@@ -1,6 +1,7 @@
 - name: Hello World Sample
   hosts: nginx-host
   vars:
+    toto: toto
     machine:
       username: '{{ ansible_user }}'
       password: '{{ ansible_password }}'
@@ -8,6 +9,9 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
+    - name: Display toto variable
+      debug:
+        var: toto
     - name: Display all variables/facts known for a host
       debug:
         var: machine
