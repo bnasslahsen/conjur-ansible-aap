@@ -8,5 +8,6 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
-    - debug:
-        var: machine    
+    - name: Display Username and Password
+      debug:
+        msg: "Username: {{ machine.username }}, Password: {{ machine.password }}" 
