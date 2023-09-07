@@ -8,6 +8,6 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
-    - name: SSH KEY
+    - name: Display all variables/facts known for a host
       debug:
-        msg: "{{ ansible_password }}" 
+        var: machine.username
