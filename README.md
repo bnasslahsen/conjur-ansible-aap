@@ -10,3 +10,7 @@ https://www.conjur.org/blog/technical-deep-dive-security-automation-with-red-hat
 ```shell
 ./load-policies.sh
 ```
+## Steps:
+
+### Create credentials in AAP
+### Create Template in Tower

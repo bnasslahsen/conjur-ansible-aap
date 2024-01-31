@@ -1,5 +1,0 @@
-### conjur policy load -b root -f ansible-safe-policy.yml
-
-- !grant
-  role: !group vault1/lob1/safe1/delegation/consumers
-  member: !host cd/ansible/controller

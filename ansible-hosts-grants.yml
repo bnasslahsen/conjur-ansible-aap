@@ -1,0 +1,3 @@
+- !grant
+  role: !group ansible-apps/delegation/consumers
+  member: !group /$APP_GROUP

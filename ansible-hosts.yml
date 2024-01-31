@@ -1,0 +1,8 @@
+- &hosts
+  - !host
+    id: ansible-host
+    annotations:
+      ansible: true
+- !grant
+  role: !group
+  members: *hosts
